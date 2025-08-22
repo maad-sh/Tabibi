@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>طبيبي</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- الشريط الجانبي -->
+  <div id="sidebar" class="sidebar">
+    <h2>💬 محادثاتك</h2>
+    <div id="chatList"></div>
+  </div>
+
+  <!-- زر القائمة -->
+  <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+
+  <!-- رأس الموقع -->
+  <header>
+    <img src="https://i.postimg.cc/gJwcFtrd/logo.png" alt="شعار طبيبي" class="logo" />
+    <h1>طبيبي</h1>
+    <p>مساعدك الصحي الذكي لتحليل الأعراض وتقديم النصائح الطبية الأولية</p>
+    <p class="vpn-note">لتجربة أفضل وضمان رد سلس وسريع قم بتشغيل VPN</p>
+  </header>
+
+  <!-- واجهة الدردشة -->
+  <main class="chat-container">
+    <div id="chatArea" class="chat-area"></div>
+    <div class="input-bar">
+      <textarea id="userInput" placeholder="اكتب أعراضك هنا..." oninput="toggleSendIcon(this)"></textarea>
+      <button id="sendBtn" onclick="sendMessage()" style="display: none;">➤</button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
